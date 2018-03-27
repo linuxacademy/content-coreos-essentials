@@ -1,0 +1,30 @@
+#cloud-config
+passwd:
+  users:
+  - name: user1
+    password_hash: $1$hUc/QKyJ$dUUHaPkrqlP4T2QOJFQs91
+    groups: 
+    - wheel
+    - docker
+    - fleet
+    - rkt
+  - name: user2
+    home_dir: /home/user1
+    no_create_home: true
+    password_hash: $1$hUc/QKyJ$dUUHaPkrqlP4T2QOJFQs91
+    groups:
+    - wheel
+    - docker
+    - fleet
+    - rkt
+update:
+  group: stable
+etcd:
+  name: demo-etcd-1
+  listen_client_urls: http://172.31.44.126:2379,http://0.0.0.0:4001
+  advertise_client_urls: http://172.31.44.126:2379
+  listen_peer_urls:            http://0.0.0.0:2380
+  initial_advertise_peer_urls: http://172.31.44.126:2380
+  initial_cluster:             demo-etcd-1=http://172.31.44.126:2380,demo-etcd-2=http://172.31.41.105:2380,demo-etcd-3=http://172.31.103.40:2380
+  initial_cluster_token:       linuxacademy123
+  initial_cluster_state:       new
