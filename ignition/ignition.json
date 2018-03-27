@@ -1,0 +1,1 @@
+{"ignition":{"config":{},"timeouts":{},"version":"2.1.0"},"networkd":{},"passwd":{"users":[{"groups":["wheel","docker","fleet","rkt"],"name":"core","passwordHash":"$1$hUc/QKyJ$dUUHaPkrqlP4T2QOJFQs91"},{"groups":["wheel","docker","fleet","rkt"],"name":"user","passwordHash":"$1$hUc/QKyJ$dUUHaPkrqlP4T2QOJFQs91"}]},"storage":{},"systemd":{}}

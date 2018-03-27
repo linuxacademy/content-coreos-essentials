@@ -1,0 +1,1 @@
+<html><body>You are being <a href="https://raw.githubusercontent.com/rkt/rkt/master/Documentation/examples/build-container/postgres/postgres-prestart.sh">redirected</a>.</body></html>

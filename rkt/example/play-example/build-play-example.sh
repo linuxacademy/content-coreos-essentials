@@ -1,0 +1,1 @@
+<html><body>You are being <a href="https://raw.githubusercontent.com/rkt/rkt/master/Documentation/examples/build-container/play-example/build-play-example.sh">redirected</a>.</body></html>
