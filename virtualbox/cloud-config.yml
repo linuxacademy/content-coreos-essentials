@@ -1,0 +1,18 @@
+#cloud-config
+# REMOVE THIS LINE — The default password is `linuxacademy` REMOVE THIS LINE
+
+  users:
+  - name: core
+    passwd: $1$cgZ8bOi4$6jWGqeq/g3MwspU2OxtsF0
+    groups: 
+    - wheel
+    - docker
+    - fleet
+    - rkt
+  - name: user
+    passwd: $1$cgZ8bOi4$6jWGqeq/g3MwspU2OxtsF0
+    groups:
+    - wheel
+    - docker
+    - fleet
+    - rkt
