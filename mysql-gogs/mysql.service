@@ -1,0 +1,12 @@
+[Unit]
+Description=MySQL database
+After=docker.service
+
+[Service]
+TimeoutStartSec=10
+ExecStartPre=-/usr/bin/docker kill mysql-gogs1
+ExecStartPre=-/usr/bin/docker rm mysql-gogs1
+ExecStart=/usr/bin/docker run --name mysql-gogs1 -e MYSQL_ROOT_PASSWORD=coreos -e MYSQL_DATABASE=gogs -e MYSQL_USER=goggy -e MYSQL_PASSWORD=coreos -d mysql:latest
+
+[Install]
+WantedBy=multi-user.target

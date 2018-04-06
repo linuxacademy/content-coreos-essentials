@@ -1,0 +1,10 @@
+[Unit]
+Description=Gogs server
+After=mysql.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run --rm -p 8300:3000 -p 8322:22 -v /srv/lxc/gogs/data:/data gogs/gogs
+
+[Install]
+WantedBy=local.target
